@@ -24,17 +24,16 @@ let operator = null;
 
 // define the operation first 
 calculator.addEventListener('click', (event) => {
-  console.log(event.target.innerText);
-  if (target.classList.contains('number')) {
+  if (event.target.classList.contains('number')) {
     handleNumber (event.target.innerText)
   };
-  if (target.classList.contains('operator')) {
+  if (event.target.classList.contains('operator')) {
     handleOperator (event.target.innerText)
   };
-  if (target.innerText === 'equals') {
+  if (event.target.classList.contains === 'equals') {
     handleEquals ()
   };
-  if (target.innerText === 'clear') {
+  if (event.target.classList.contains === 'clear') {
     handleClear ()
   };
 });
