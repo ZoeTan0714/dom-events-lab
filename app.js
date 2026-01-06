@@ -30,10 +30,10 @@ calculator.addEventListener('click', (event) => {
   if (event.target.classList.contains('operator')) {
     handleOperator (event.target.innerText)
   };
-  if (event.target.classList.contains === 'equals') {
+  if (event.target.classList.contains ('equals')) {
     handleEquals ()
   };
-  if (event.target.classList.contains === 'clear') {
+  if (event.target.classList.contains ('clear')) {
     handleClear ()
   };
 });
