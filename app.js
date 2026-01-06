@@ -45,7 +45,7 @@ function handleNumber (num) {
        firstNumber = firstNumber === null
       ? num
       : firstNumber + num;
-      calculator.innerText = firtNumber;
+      calculator.innerText = firstNumber;
   } else {
       secondNumber = secondNumber === null
       ? num
