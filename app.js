@@ -11,10 +11,10 @@
 
 const buttons = document.querySelectorAll ('.button')
 
-buttons.forEach ((button) => {
-    button.addEventListener ('click', (event) => {
-    console.log (event.target.innerText)})
-    });
+// buttons.forEach ((button) => {
+//     button.addEventListener ('click', (event) => {
+//     console.log (event.target.innerText)})
+//     });
 
 const calculator = document.querySelector ('#calculator')
 const display = document.querySelector ('.display')
@@ -25,16 +25,16 @@ let operator = null;
 // define the operation first 
 calculator.addEventListener('click', (event) => {
   console.log(event.target.innerText);
-  if (event.target.classList.contains('number')) {
+  if (target.classList.contains('number')) {
     handleNumber (event.target.innerText)
   };
-  if (event.target.classList.contains('operator')) {
+  if (target.classList.contains('operator')) {
     handleOperator (event.target.innerText)
   };
-  if (event.target.innerText === 'equals') {
+  if (target.innerText === 'equals') {
     handleEquals ()
   };
-  if (event.target.innerText === 'clear') {
+  if (target.innerText === 'clear') {
     handleClear ()
   };
 });
