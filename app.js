@@ -17,7 +17,7 @@ buttons.forEach ((button) => {
     });
 
 const calculator = document.querySelector ('#calculator')
-const display = document.querySelector ('#display')
+const display = document.querySelector ('.display')
 let firstNumber = null;
 let secondNumber = null;
 let operator = null;
