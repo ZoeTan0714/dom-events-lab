@@ -18,7 +18,7 @@ buttons.forEach ((button) => {
 
 
 const calculator = document.querySelector ('#calculator')
-let firtNumber = null;
+let firstNumber = null;
 let secondNumber = null;
 let operator = null;
 
@@ -28,7 +28,7 @@ calculator.addEventListener('click', (event) => {
   if (event.target.classList.contains('number')) {
     handleNumber (event.target.innerText)
   };
-  if (event.target.classList.contrains('operator')) {
+  if (event.target.classList.contains('operator')) {
     handleOperator (event.target.innerText)
   };
   if (event.target.innerText === 'equals') {
@@ -40,7 +40,7 @@ calculator.addEventListener('click', (event) => {
 });
 
 // handle  the number (become string)
-function handle (num) {
+function handleNumber (num) {
   if (operator === null) {
        firstNumber = firstNumber === null
       ? num
@@ -83,7 +83,7 @@ function handleEquals () {
       result = num1 / num2;
       break;
 }
- calculator.innertext = result; 
+ calculator.innerText = result; 
 };
 
  // handle clear 
@@ -91,5 +91,5 @@ function handleEquals () {
    firstNumber = null;
    secondNumber = null;
    operator = null;
-   display.innerText = '0'
+   calculator.innerText = '0'
  };
