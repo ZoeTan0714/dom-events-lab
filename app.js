@@ -18,15 +18,78 @@ buttons.forEach ((button) => {
 
 
 const calculator = document.querySelector ('#calculator')
+let firtNumber = null;
+let secondNumber = null;
+let operator = null;
 
+// define the operation first 
 calculator.addEventListener('click', (event) => {
   console.log(event.target.innerText);
-
   if (event.target.classList.contains('number')) {
-    const = 
+    handleNumber (event.target.innerText)
+  };
+  if (event.target.classList.contrains('operator')) {
+    handleOperator (event.target.innerText)
+  };
+  if (event.target.innerText === 'equals') {
+    handleEquals ()
+  };
+  if (event.target.innerText === 'clear') {
+    handleClear ()
+  };
+});
+
+// handle  the number (become string)
+function handle (num) {
+  if (operator === null) {
+       firstNumber = firstNumber === null
+      ? num
+      : firstNumber + num;
+      calculator.innerText = firtNumber;
+  } else {
+      secondNumber = secondNumber === null
+      ? num
+      : secondNumber + num;
+      calculator.innerText = secondNumber;
+  }
+};
+
+// handle the operator 
+function handleOperator(op) {
+  operator = op;
+}
+
+// handle the equal
+function handleEquals () {
+  if (firstNumber === null || secondNumber === null || operator === null){
+    return;
   }
 
-  if (event.target.innerText === '*') {
-    
-  }
-});
+  const num1 = Number(firstNumber);
+  const num2 = Number(secondNumber);
+  let result;
+
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 + num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+}
+ calculator.innertext = result; 
+};
+
+ // handle clear 
+ function handleClear () {
+   firstNumber = null;
+   secondNumber = null;
+   operator = null;
+   display.innerText = '0'
+ };
